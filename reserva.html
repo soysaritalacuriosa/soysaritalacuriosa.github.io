@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reserva tu mentoría · Sarita la curiosa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0c1719;--panel:#172c30;--cream:#f2ebdc;--muted:#b9bdb4;--gold:#dba42b;--teal:#3d998d}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--cream);font-family:Poppins,system-ui,sans-serif;font-size:16px;line-height:1.5}
+  .film{height:26px;background:repeating-linear-gradient(90deg,var(--panel) 0 18px,transparent 18px 28px) center/100% 9px no-repeat,#070e0f;border-bottom:1px solid #1f3a3f}
+  main{max-width:520px;margin:0 auto;padding:26px 18px 60px}
+  .back{color:var(--muted);text-decoration:none;font-size:14px}
+  .kicker{display:block;color:var(--teal);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin:24px 0 6px}
+  h1{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:34px;line-height:1.1;margin:0 0 12px;color:var(--gold)}
+  .intro{color:var(--muted);margin:0 0 26px}
+  .intro b{color:var(--cream);font-weight:600}
+  fieldset{border:0;padding:0;margin:0 0 22px}
+  legend,label.q{display:block;font-weight:600;margin-bottom:10px}
+  .hint{display:block;font-weight:400;color:var(--muted);font-size:14px}
+  input[type=text],textarea{width:100%;background:var(--panel);border:1px solid #2b4a50;border-radius:12px;color:var(--cream);font:inherit;padding:13px 14px}
+  input[type=text]:focus,textarea:focus{outline:2px solid var(--teal);border-color:transparent}
+  textarea{min-height:96px;resize:vertical}
+  .opts{display:flex;flex-wrap:wrap;gap:8px}
+  .opts label{cursor:pointer}
+  .opts input{position:absolute;opacity:0}
+  .opts span{display:inline-block;background:var(--panel);border:1px solid #2b4a50;border-radius:999px;padding:9px 15px;font-size:15px}
+  .opts input:checked+span{background:var(--teal);border-color:var(--teal);color:var(--cream)}
+  .opts input:focus-visible+span{outline:2px solid var(--gold)}
+  button{width:100%;background:var(--gold);color:var(--bg);font:600 18px Poppins,system-ui,sans-serif;border:0;border-radius:999px;padding:17px;cursor:pointer;box-shadow:0 6px 0 #9c7419;margin-top:8px}
+  button:active{transform:translateY(3px);box-shadow:0 3px 0 #9c7419}
+  .note{color:var(--muted);font-size:14px;text-align:center;margin-top:16px}
+  .err{color:var(--gold);font-size:14px;min-height:20px}
+  input[type=email]{width:100%;background:var(--panel);border:1px solid #2b4a50;border-radius:12px;color:var(--cream);font:inherit;padding:13px 14px}
+  input[type=email]:focus{outline:2px solid var(--teal);border-color:transparent}
+</style>
+</head>
+<body>
+<div class="film"></div>
+<main>
+    <span class="kicker">Pago recibido · último paso</span>
+  <h1>¡Ya tienes tu mentoría!</h1>
+  <p class="intro">Antes de vernos quiero saber en qué punto estás, para llegar con tus vídeos ya mirados y no perder ni un minuto. Contesta esto y <b>al enviarlo eliges día y hora</b>. La factura te llega por correo.</p>
+
+  <form id="f" novalidate>
+    <fieldset>
+      <legend>¿Qué mentoría has elegido?</legend>
+      <div class="opts">
+        <label><input type="radio" name="mentoria" value="Mentoría suelta"><span>Suelta</span></label>
+        <label><input type="radio" name="mentoria" value="Pack de 2 sesiones"><span>Pack de 2 sesiones</span></label>
+        <label><input type="radio" name="mentoria" value="Pack de 3 sesiones"><span>Pack de 3 sesiones</span></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <label class="q" for="nombre">¿Cómo te llamas?</label>
+      <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+    </fieldset>
+    <fieldset>
+      <label class="q" for="email">Tu correo</label>
+      <input type="email" id="email" name="email" autocomplete="email" required>
+    </fieldset>
+    <fieldset>
+      <label class="q" for="marca">¿Tu Instagram?</label>
+      <input type="text" id="marca" name="instagram" placeholder="@tumarca">
+    </fieldset>
+
+    <fieldset>
+      <legend>¿En qué punto estás con la edición?</legend>
+      <div class="opts">
+        <label><input type="radio" name="nivel" value="No he editado nunca"><span>No he editado nunca</span></label>
+        <label><input type="radio" name="nivel" value="Edito, pero tardo una eternidad"><span>Edito, pero tardo una eternidad</span></label>
+        <label><input type="radio" name="nivel" value="Edito bien y quiero subir de nivel"><span>Edito bien y quiero subir de nivel</span></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>¿Con qué editas?</legend>
+      <div class="opts">
+        <label><input type="radio" name="programa" value="CapCut del móvil"><span>CapCut del móvil</span></label>
+        <label><input type="radio" name="programa" value="CapCut del ordenador"><span>CapCut del ordenador</span></label>
+        <label><input type="radio" name="programa" value="Edits de Instagram"><span>Edits de Instagram</span></label>
+        <label><input type="radio" name="programa" value="Otro"><span>Otro</span></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <label class="q" for="ayuda">¿Qué te gustaría resolver conmigo?</label>
+      <textarea id="ayuda" name="ayuda" required></textarea>
+    </fieldset>
+    <fieldset>
+      <label class="q" for="reel">Enlaces a tus reels <span class="hint">Uno o varios: los voy a revisar antes de la sesión</span></label>
+      <textarea id="reel" name="reels" placeholder="https://www.instagram.com/reel/..."></textarea>
+    </fieldset>
+
+    <p class="err" id="err" role="alert"></p>
+    <button type="submit" id="btn">Enviar y elegir fecha</button>
+  </form>
+  <div id="ok" hidden>
+    <h1>¡Recibido!</h1>
+    <p class="intro">Te escribo en menos de 24 horas laborables para cerrar día y hora. Si tienes prisa, escríbeme por <a href="https://wa.me/34699596052" style="color:var(--cream)">WhatsApp</a>.</p>
+  </div>
+</main>
+
+<script>
+  /* ====== RELLENA ESTO ====== */
+  var WEB3FORMS_KEY = "";   // clave de Web3Forms (llega a tu correo)
+  var RESERVA_URL   = "";   // enlace de tu página de citas de Google Calendar
+  /* ========================= */
+  var pack = new URLSearchParams(location.search).get("pack");
+  var opciones = document.querySelectorAll("input[name=mentoria]");
+  if (pack && opciones[pack-1]) opciones[pack-1].checked = true;
+  document.getElementById("f").addEventListener("submit", function(e){
+    e.preventDefault();
+    var f = e.target, err = document.getElementById("err"), btn = document.getElementById("btn");
+    if (!f.querySelector("input[name=mentoria]:checked")) {
+      err.textContent = "Marca qué mentoría has elegido."; return;
+    }
+    if (!f.nombre.value.trim() || !/\S+@\S+\.\S+/.test(f.email.value) || !f.ayuda.value.trim()) {
+      err.textContent = "Necesito tu nombre, tu correo y qué te gustaría resolver."; return;
+    }
+    var data = new FormData(f);
+    data.append("access_key", WEB3FORMS_KEY);
+    data.append("subject", "Mentoría pagada: " + f.nombre.value.trim());
+    data.append("from_name", "Enlace de la bio");
+    btn.disabled = true; btn.textContent = "Enviando…";
+    fetch("https://api.web3forms.com/submit", {method:"POST", body:data})
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        if (!j.success) throw new Error();
+        if (RESERVA_URL) { window.location.href = RESERVA_URL; return; }
+        f.hidden = true; document.querySelector(".intro").hidden = true;
+        document.getElementById("ok").hidden = false; window.scrollTo(0,0);
+      })
+      .catch(function(){
+        btn.disabled = false; btn.textContent = "Enviar y elegir fecha";
+        err.innerHTML = 'No se ha podido enviar. Escríbeme por <a href="https://wa.me/34699596052" style="color:var(--cream)">WhatsApp</a> y lo vemos.';
+      });
+  });
+</script>
+</body>
+</html>

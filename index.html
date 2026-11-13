@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sarita la curiosa · Edición de vídeo</title>
+<meta name="description" content="Hago que no pasen de largo tus vídeos. Talleres, mentorías y edición de vídeo para redes con Sarita (@soysaritalacuriosa).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c1719; --panel:#172c30; --cream:#f2ebdc; --muted:#b9bdb4;
+    --gold:#dba42b; --teal:#3d998d;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--cream);font-family:Poppins,system-ui,sans-serif;font-size:16px;line-height:1.5;min-height:100vh}
+  .film{height:26px;background:repeating-linear-gradient(90deg,var(--panel) 0 18px,transparent 18px 28px) center/100% 9px no-repeat,#070e0f;border-bottom:1px solid #1f3a3f}
+  .film.bottom{border-top:1px solid #1f3a3f;border-bottom:0}
+  main{max-width:480px;margin:0 auto;padding:34px 18px 40px}
+
+  /* Cabecera */
+  header{text-align:center;margin-bottom:28px}
+  .avatar{width:132px;height:132px;border-radius:50%;border:3px solid var(--gold);margin:0 auto 16px;overflow:hidden;background:var(--panel)}
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  h1{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:30px;line-height:1.1;margin:0 0 6px}
+  .handle{color:var(--teal);font-size:14px;font-weight:600;letter-spacing:.04em}
+  .claim{margin:14px auto 0;max-width:340px;color:var(--muted);font-size:15px}
+  .claim b{color:var(--cream);font-weight:600}
+
+  /* Botones tipo portada: texto + recorte de revista */
+  .links{display:flex;flex-direction:column;gap:14px}
+  a.card{display:flex;align-items:center;gap:14px;text-decoration:none;border-radius:16px;padding:16px 16px 16px 20px;min-height:132px;transition:transform .15s ease}
+  a.card:hover{transform:translateY(-2px)}
+  a.card:active{transform:translateY(1px)}
+  .card .txt{flex:1;min-width:0}
+  .card .kicker{display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;opacity:.85}
+  .card .title{display:block;font-family:"Young Serif",Georgia,serif;font-size:21px;line-height:1.15}
+  .card .sub{display:block;font-size:13.5px;margin-top:6px;opacity:.9}
+  .card .pic{flex:0 0 104px;width:104px;height:104px;background:#f7f1e3;padding:5px 5px 14px;transform:rotate(3deg);box-shadow:0 4px 10px rgba(0,0,0,.35)}
+  .card:nth-of-type(even) .pic{transform:rotate(-3deg)}
+  .card .pic img{width:100%;height:100%;object-fit:cover;display:block}
+  .mostaza{background:var(--gold);color:var(--bg)}
+  .turquesa{background:var(--teal);color:var(--cream)}
+  .gris{background:var(--muted);color:var(--bg)}
+  .oscuro{background:var(--panel);color:var(--cream);border:1px solid #2b4a50}
+  .oscuro .kicker{color:var(--teal);opacity:1}
+
+  .sep{display:flex;align-items:center;gap:12px;margin:26px 0 12px;color:var(--muted);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+  .sep:before,.sep:after{content:"";flex:1;height:1px;background:#2b4a50}
+
+  footer{text-align:center;color:var(--muted);font-size:13px;margin-top:34px}
+  footer a{color:var(--cream);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="film"></div>
+<main>
+  <header>
+    <div class="avatar"><img src="sarita.jpg" alt="Sarita, editora de vídeo" width="480" height="480"></div>
+    <h1>Soy Sarita, la curiosa</h1>
+    <div class="handle">@soysaritalacuriosa</div>
+    <p class="claim">Hago que <b>no pasen de largo tus vídeos</b>. Si quieres aprender, te enseño. Si no quieres ni verlos, te los monto yo.</p>
+  </header>
+
+  <nav class="links">
+    <!-- TALLER: desaparece solo el 19 de noviembre (data-hasta) -->
+    <a class="card mostaza" data-hasta="2026-11-19T00:00:00+01:00" href="https://lacuriosaedits.github.io/del-huevo-al-reel/">
+      <span class="txt">
+        <span class="kicker">Taller en directo · 18 nov</span>
+        <span class="title">Del huevo al reel</span>
+        <span class="sub">Mi método para salir haciendo tu reel sin que te dejes los huevos.</span>
+      </span>
+      <span class="pic"><img src="taller.jpg" alt="" loading="lazy"></span>
+    </a>
+
+    <!-- TEST: cambiar el enlace cuando lo movamos a GitHub -->
+    <a class="card turquesa" href="https://testmontaje.pages.dev">
+      <span class="txt">
+        <span class="kicker">Gratis · 2 minutos</span>
+        <span class="title">Haz el test de montaje</span>
+        <span class="sub">Descubre qué hace que te pasen el reel de largo.</span>
+      </span>
+      <span class="pic"><img src="test.jpg" alt="" loading="lazy"></span>
+    </a>
+
+    <div class="sep">Trabajamos juntas</div>
+
+    <a class="card oscuro" href="mentoria.html">
+      <span class="txt">
+        <span class="kicker">Aprender a editar</span>
+        <span class="title">Mentoría 1:1 de edición</span>
+        <span class="sub">Buscamos por dónde se te escapan los vídeos.</span>
+      </span>
+      <span class="pic"><img src="mentoria.jpg" alt="" loading="lazy"></span>
+    </a>
+
+    <a class="card gris" href="delegar.html">
+      <span class="txt">
+        <span class="kicker">Delegar la edición</span>
+        <span class="title">Te monto tus vídeos</span>
+        <span class="sub">Reels, anuncios de lanzamiento, YouTube o pódcast.</span>
+      </span>
+      <span class="pic"><img src="delegar.jpg" alt="" loading="lazy"></span>
+    </a>
+
+    <div class="sep">Mis curiosidades</div>
+
+    <!-- YOUTUBE: el botón no se ve hasta que pongas el enlace en href -->
+    <a class="card oscuro js-youtube" href="">
+      <span class="txt">
+        <span class="kicker">Laboratorio</span>
+        <span class="title">Historias con IA</span>
+        <span class="sub">Lo que voy contando con inteligencia artificial.</span>
+      </span>
+      <span class="pic"><img src="ia.jpg" alt="" loading="lazy"></span>
+    </a>
+
+    <a class="card oscuro" href="https://drive.google.com/drive/folders/1aSiTScuCD8H3k4aZpe5JkO0IdsY5XIh9?usp=sharing">
+      <span class="txt">
+        <span class="kicker">20 años montando</span>
+        <span class="title">Mi portfolio</span>
+        <span class="sub">De las promos de Canal Plus a los reels de hoy.</span>
+      </span>
+      <span class="pic"><img src="portfolio.jpg" alt="" loading="lazy"></span>
+    </a>
+  </nav>
+
+  <footer>
+    <a href="https://instagram.com/soysaritalacuriosa">Instagram</a> ·
+    <a href="https://wa.me/34699596052">WhatsApp</a> ·
+    <a href="mailto:soysaritalacuriosa@gmail.com">Correo</a>
+  </footer>
+</main>
+<div class="film bottom"></div>
+<script>
+  var ahora = new Date();
+  document.querySelectorAll("[data-hasta]").forEach(function(el){
+    if (ahora >= new Date(el.getAttribute("data-hasta"))) el.remove();
+  });
+  document.querySelectorAll(".js-youtube").forEach(function(el){
+    if (!el.getAttribute("href")) el.remove();
+  });
+</script>
+</body>
+</html>

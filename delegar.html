@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Te monto tus vídeos · Sarita la curiosa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0c1719;--panel:#172c30;--cream:#f2ebdc;--muted:#b9bdb4;--gold:#dba42b;--teal:#3d998d}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--cream);font-family:Poppins,system-ui,sans-serif;font-size:16px;line-height:1.5}
+  .film{height:26px;background:repeating-linear-gradient(90deg,var(--panel) 0 18px,transparent 18px 28px) center/100% 9px no-repeat,#070e0f;border-bottom:1px solid #1f3a3f}
+  main{max-width:520px;margin:0 auto;padding:26px 18px 60px}
+  .back{color:var(--muted);text-decoration:none;font-size:14px}
+  .kicker{display:block;color:var(--teal);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin:24px 0 6px}
+  h1{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:34px;line-height:1.1;margin:0 0 12px;color:var(--gold)}
+  .intro{color:var(--muted);margin:0 0 26px}
+  .intro b{color:var(--cream);font-weight:600}
+  fieldset{border:0;padding:0;margin:0 0 22px}
+  legend,label.q{display:block;font-weight:600;margin-bottom:10px}
+  .hint{display:block;font-weight:400;color:var(--muted);font-size:14px}
+  input[type=text],textarea{width:100%;background:var(--panel);border:1px solid #2b4a50;border-radius:12px;color:var(--cream);font:inherit;padding:13px 14px}
+  input[type=text]:focus,textarea:focus{outline:2px solid var(--teal);border-color:transparent}
+  textarea{min-height:96px;resize:vertical}
+  .opts{display:flex;flex-wrap:wrap;gap:8px}
+  .opts label{cursor:pointer}
+  .opts input{position:absolute;opacity:0}
+  .opts span{display:inline-block;background:var(--panel);border:1px solid #2b4a50;border-radius:999px;padding:9px 15px;font-size:15px}
+  .opts input:checked+span{background:var(--teal);border-color:var(--teal);color:var(--cream)}
+  .opts input:focus-visible+span{outline:2px solid var(--gold)}
+  button{width:100%;background:var(--gold);color:var(--bg);font:600 18px Poppins,system-ui,sans-serif;border:0;border-radius:999px;padding:17px;cursor:pointer;box-shadow:0 6px 0 #9c7419;margin-top:8px}
+  button:active{transform:translateY(3px);box-shadow:0 3px 0 #9c7419}
+  .note{color:var(--muted);font-size:14px;text-align:center;margin-top:16px}
+  .err{color:var(--gold);font-size:14px;min-height:20px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:20px}
+  .head .pic{flex:0 0 96px;height:96px;background:#f7f1e3;padding:5px 5px 13px;transform:rotate(-3deg);box-shadow:0 4px 10px rgba(0,0,0,.35)}
+  .head .pic img{width:100%;height:100%;object-fit:cover;display:block}
+  .head .kicker{margin-top:0}
+</style>
+</head>
+<body>
+<div class="film"></div>
+<main>
+  <a class="back" href="./">← Volver</a>
+  <div class="head">
+    <div><span class="kicker">Delegar la edición</span>
+    <h1>Te monto tus vídeos</h1></div>
+    <span class="pic"><img src="delegar.jpg" alt=""></span>
+  </div>
+  <p class="intro">Tú grabas, yo monto. Contesta esto en un minuto y al darle al botón <b>se abre mi WhatsApp con todo ya escrito</b>. Solo tienes que enviarlo.</p>
+
+  <form id="f" novalidate>
+    <fieldset>
+      <label class="q" for="nombre">¿Cómo te llamas?</label>
+      <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+    </fieldset>
+
+    <fieldset>
+      <label class="q" for="marca">¿Tu marca o tu Instagram?</label>
+      <input type="text" id="marca" name="marca" placeholder="@tumarca">
+    </fieldset>
+
+    <fieldset>
+      <legend>¿Qué necesitas? <span class="hint">Puedes marcar varias</span></legend>
+      <div class="opts">
+        <label><input type="checkbox" name="tipo" value="Edición básica"><span>Edición básica</span></label>
+        <label><input type="checkbox" name="tipo" value="Edición minimalista"><span>Edición minimalista</span></label>
+        <label><input type="checkbox" name="tipo" value="Edición pro"><span>Edición pro</span></label>
+        <label><input type="checkbox" name="tipo" value="Anuncio de lanzamiento"><span>Anuncio de lanzamiento</span></label>
+        <label><input type="checkbox" name="tipo" value="Vídeo de YouTube"><span>Vídeo de YouTube</span></label>
+        <label><input type="checkbox" name="tipo" value="Pódcast"><span>Pódcast</span></label>
+        <label><input type="checkbox" name="tipo" value="No lo sé, aconséjame"><span>No lo sé, aconséjame</span></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>¿Cuántos vídeos más o menos?</legend>
+      <div class="opts">
+        <label><input type="radio" name="cuantos" value="Uno suelto"><span>Uno suelto</span></label>
+        <label><input type="radio" name="cuantos" value="2 a 4 al mes"><span>2 a 4 al mes</span></label>
+        <label><input type="radio" name="cuantos" value="Más de 4 al mes"><span>Más de 4 al mes</span></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>¿Para cuándo?</legend>
+      <div class="opts">
+        <label><input type="radio" name="cuando" value="Lo antes posible"><span>Lo antes posible</span></label>
+        <label><input type="radio" name="cuando" value="Este mes"><span>Este mes</span></label>
+        <label><input type="radio" name="cuando" value="Sin prisa"><span>Sin prisa</span></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <label class="q" for="mas">¿Algo más que deba saber? <span class="hint">Un reel que te guste, una idea, lo que sea</span></label>
+      <textarea id="mas" name="mas"></textarea>
+    </fieldset>
+
+    <p class="err" id="err" role="alert"></p>
+    <button type="submit">Enviar por WhatsApp</button>
+    <p class="note">El precio te lo paso por privado, según lo que necesites.</p>
+  </form>
+</main>
+
+<script>
+  var WHATSAPP = "34699596052";
+  document.getElementById("f").addEventListener("submit", function(e){
+    e.preventDefault();
+    var f = e.target;
+    var nombre = f.nombre.value.trim();
+    var tipos = Array.prototype.map.call(f.querySelectorAll("input[name=tipo]:checked"), function(i){return i.value});
+    if (!nombre || !tipos.length) {
+      document.getElementById("err").textContent = "Dime al menos tu nombre y qué necesitas.";
+      return;
+    }
+    var val = function(n){ var c = f.querySelector("input[name="+n+"]:checked"); return c ? c.value : "—"; };
+    var msg = "Hola, Sarita. Estoy interesada en delegar mis vídeos. Mi nombre es " + nombre + ".\n\n" +
+      "Marca / Instagram: " + (f.marca.value.trim() || "—") + "\n" +
+      "Necesito: " + tipos.join(", ") + "\n" +
+      "Cuántos: " + val("cuantos") + "\n" +
+      "Para cuándo: " + val("cuando") +
+      (f.mas.value.trim() ? "\n\nAdemás: " + f.mas.value.trim() : "");
+    window.location.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
+  });
+</script>
+</body>
+</html>
