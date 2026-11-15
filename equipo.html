@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi equipo de edición · Sarita la curiosa</title>
+<meta name="description" content="Lo que uso para grabar, iluminar y editar vídeo para redes. Por si me lo vuelves a preguntar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c1719; --panel:#172c30; --cream:#f2ebdc; --muted:#b9bdb4;
+    --gold:#dba42b; --teal:#3d998d;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--cream);font-family:Poppins,system-ui,sans-serif;font-size:16px;line-height:1.5;min-height:100vh}
+  .film{height:26px;background:repeating-linear-gradient(90deg,var(--panel) 0 18px,transparent 18px 28px) center/100% 9px no-repeat,#070e0f;border-bottom:1px solid #1f3a3f}
+  .film.bottom{border-top:1px solid #1f3a3f;border-bottom:0}
+  main{max-width:480px;margin:0 auto;padding:26px 18px 40px}
+
+  .volver{display:inline-block;color:var(--muted);text-decoration:none;font-size:14px;margin-bottom:18px}
+  .volver:hover{color:var(--cream)}
+
+  header{text-align:center;margin-bottom:22px}
+  .kicker{display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+  h1{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:30px;line-height:1.1;margin:0 0 10px}
+  .intro{margin:0 auto;max-width:360px;color:var(--muted);font-size:15px}
+  .intro b{color:var(--cream);font-weight:600}
+
+  .bf{background:var(--gold);color:var(--bg);border-radius:14px;padding:12px 16px;margin:20px 0 4px;font-size:14px;text-align:center}
+  .bf b{font-weight:600}
+
+  .sep{display:flex;align-items:center;gap:12px;margin:28px 0 12px;color:var(--muted);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+  .sep:before,.sep:after{content:"";flex:1;height:1px;background:#2b4a50}
+
+  .item{display:block;text-decoration:none;color:var(--cream);background:var(--panel);border:1px solid #2b4a50;border-radius:16px;padding:16px 18px;margin-bottom:12px;transition:transform .15s ease}
+  .item:hover{transform:translateY(-2px)}
+  .item:active{transform:translateY(1px)}
+  .item .nombre{display:block;font-family:"Young Serif",Georgia,serif;font-size:19px;line-height:1.2}
+  .item .para{display:block;font-size:14px;color:var(--muted);margin-top:6px}
+  .item .ir{display:inline-block;margin-top:10px;font-size:13px;font-weight:600;color:var(--gold)}
+
+  .aviso{margin-top:30px;padding:14px 16px;border:1px dashed #2b4a50;border-radius:12px;color:var(--muted);font-size:13px}
+
+  footer{text-align:center;color:var(--muted);font-size:13px;margin-top:30px}
+  footer a{color:var(--cream);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="film"></div>
+<main>
+  <a class="volver" href="index.html">← Volver</a>
+
+  <header>
+    <span class="kicker">Por si me lo vuelves a preguntar</span>
+    <h1>Mi equipo de edición</h1>
+    <p class="intro">Lo que tengo para grabar, iluminar y editar. <b>Spoiler:</b> el equipo no te hace el reel, pero hay cosas que te ahorran muchos disgustos.</p>
+  </header>
+
+  <!-- BLACK FRIDAY: desaparece solo el 2 de diciembre (data-hasta) -->
+  <div class="bf" data-hasta="2026-12-02T00:00:00+01:00">
+    <b>Semana de Black Friday:</b> mira el precio antes de comprar, que estos días baila.
+  </div>
+
+  <div class="sep">Para grabar</div>
+
+  <a class="item" data-asin="B0G39C97WQ" target="_blank" rel="noopener sponsored">
+    <span class="nombre">Micrófonos DJI Mic Mini 2</span>
+    <span class="para">Dos micros inalámbricos. Un vídeo regulero se perdona; un audio malo, no.</span>
+    <span class="ir">Verlo en Amazon →</span>
+  </a>
+
+  <a class="item" data-asin="B0B13S1DHT" target="_blank" rel="noopener sponsored">
+    <span class="nombre">Trípode flexible con mando</span>
+    <span class="para">El de llevar en el bolso. Con mando, para no ir corriendo hasta el móvil en cada toma.</span>
+    <span class="ir">Verlo en Amazon →</span>
+  </a>
+
+  <a class="item" data-asin="B0D9JGFQWQ" target="_blank" rel="noopener sponsored">
+    <span class="nombre">Trípode magnético plegable</span>
+    <span class="para">Se engancha al móvil por detrás y se queda de pie en la mesa. Para hablar a cámara sin pelearte con pinzas.</span>
+    <span class="ir">Verlo en Amazon →</span>
+  </a>
+
+  <div class="sep">Para la luz</div>
+
+  <a class="item" data-asin="B0D4HJF77F" target="_blank" rel="noopener sponsored">
+    <span class="nombre">Reflector 5 en 1 con pinza</span>
+    <span class="para">La luz más barata que existe: rebota la que ya tienes y te quita las ojeras de la cara.</span>
+    <span class="ir">Verlo en Amazon →</span>
+  </a>
+
+  <a class="item" data-asin="B0BG4BN1TZ" target="_blank" rel="noopener sponsored">
+    <span class="nombre">Barra de luz RGB con batería</span>
+    <span class="para">Para darle color al fondo o rellenar una sombra. Sin cables.</span>
+    <span class="ir">Verlo en Amazon →</span>
+  </a>
+
+  <a class="item" data-asin="B0C4DQBBF5" target="_blank" rel="noopener sponsored">
+    <span class="nombre">Foco LED NEEWER CB60B</span>
+    <span class="para">El foco serio. Luz cálida o fría, y se maneja desde el móvil. Para cuando la ventana te abandona a las cinco.</span>
+    <span class="ir">Verlo en Amazon →</span>
+  </a>
+
+  <div class="sep">Para editar y guardar</div>
+
+  <a class="item" data-asin="B0BJKGR6B4" target="_blank" rel="noopener sponsored">
+    <span class="nombre">Soporte elevador para el portátil</span>
+    <span class="para">Pantalla a la altura de los ojos. Tu cervical te lo agradecerá después de tres horas de timeline.</span>
+    <span class="ir">Verlo en Amazon →</span>
+  </a>
+
+  <a class="item" data-asin="B0CHJXHVZM" target="_blank" rel="noopener sponsored">
+    <span class="nombre">Disco SSD externo SanDisk 1 TB</span>
+    <span class="para">Rápido y pequeño. Para editar los proyectos fuera del ordenador y que no se te llene.</span>
+    <span class="ir">Verlo en Amazon →</span>
+  </a>
+
+  <a class="item" data-asin="B0D9JYC79Q" target="_blank" rel="noopener sponsored">
+    <span class="nombre">Carcasa USB-C para SSD M.2</span>
+    <span class="para">Convierte un SSD de los pequeñitos en disco externo rápido. Se pega con imán.</span>
+    <span class="ir">Verlo en Amazon →</span>
+  </a>
+
+  <a class="item" data-asin="B0D2KKVZN2" target="_blank" rel="noopener sponsored">
+    <span class="nombre">Servidor NAS UGREEN de 4 bahías</span>
+    <span class="para">Para cuando los discos duros ya te ocupan la mesa: todo guardado en un sitio y accesible desde casa o fuera. Ojo, viene sin discos.</span>
+    <span class="ir">Verlo en Amazon →</span>
+  </a>
+
+  <p class="aviso">Algunos enlaces son de afiliada: si compras a través de ellos, Amazon me da una pequeña comisión y a ti no te cuesta nada más. Como participante en el Programa de Afiliados de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables.</p>
+
+  <footer>
+    <a href="https://instagram.com/soysaritalacuriosa">Instagram</a> ·
+    <a href="https://wa.me/34699596052">WhatsApp</a>
+  </footer>
+</main>
+<div class="film bottom"></div>
+<script>
+  // ID DE AFILIADA: cuando Amazon te lo dé, ponlo aquí (ej. "saritalacuriosa-21").
+  // Mientras esté vacío, los enlaces van a Amazon normal, sin comisión.
+  var TAG = "";
+
+  document.querySelectorAll("[data-asin]").forEach(function(el){
+    var url = "https://www.amazon.es/dp/" + el.getAttribute("data-asin");
+    if (TAG) url += "?tag=" + TAG;
+    el.setAttribute("href", url);
+  });
+
+  var ahora = new Date();
+  document.querySelectorAll("[data-hasta]").forEach(function(el){
+    if (ahora >= new Date(el.getAttribute("data-hasta"))) el.remove();
+  });
+</script>
+</body>
+</html>
